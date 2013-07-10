@@ -2,14 +2,17 @@ DATA WORK.IEP_yrs;
     LENGTH
         student_id       $ 11
         year               8
+        food_pref	 $ 12
         iep_spec_ed_flg  $ 15 ;
     FORMAT
         student_id       $CHAR11.
         year             BEST12.
+        food_pref	 $CHAR12.
         iep_spec_ed_flg  $CHAR15. ;
     INFORMAT
         student_id       $CHAR11.
         year             BEST12.
+        food_pref	 $CHAR12.
         iep_spec_ed_flg  $CHAR15. ;
     INFILE 'C:\DOCUME~1\BJABBA~1\LOCALS~1\Temp\SAS Temporary Files\_TD432\#LN00015'
         LRECL=38
@@ -19,7 +22,8 @@ DATA WORK.IEP_yrs;
     INPUT
         @1     student_id       $CHAR11.
         @12    year             ?? BEST12.
-        @24    iep_spec_ed_flg  $CHAR15. ;
+        @24    food_pref	$CHAR12.
+        @36    iep_spec_ed_flg  $CHAR15. ;
 RUN;
 
 
